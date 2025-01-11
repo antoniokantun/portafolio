@@ -55,11 +55,18 @@ export const Navigation = ({ isMenuOpen, toggleMenu, setIsMenuOpen }: Navigation
                 Sobre mí
               </a>
               <a
-                href="#projects"
+                href="#skill"
                 className="w-full text-center py-2 hover:bg-gray-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Proyectos
+                Habilidades
+              </a>
+              <a
+                href="#experience"
+                className="w-full text-center py-2 hover:bg-gray-700 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Experiencia
               </a>
               <a
                 href="#contact"
