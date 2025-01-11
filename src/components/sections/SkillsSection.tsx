@@ -61,11 +61,12 @@ const SkillsSection = () => {
       skills: [
         { icon: 'php', color: '#777BB4' },
         { icon: 'python', color: '#3776AB' },
+        { icon: 'csharp', color: '#239120' }, 
         { icon: 'nodejs', color: '#339933' },
         { icon: 'express', color: '#000000' },
         { icon: 'laravel', color: '#FF2D20' },
         { icon: 'mysql', color: '#4479A1' },
-        { icon: 'postgresql', color: '#4169E1' }
+        { icon: 'postgresql', color: '#4169E1' },
       ]
     },
     {

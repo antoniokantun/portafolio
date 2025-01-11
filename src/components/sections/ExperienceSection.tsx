@@ -39,23 +39,24 @@ const ExperienceSection = () => {
       skills: ["Laravel", "PHP", "TailwindCSS", "MySQL", "Git"]
     },
     {
-      title: "Aplicación web Tsakin",
+      title: "Aplicación web Carmanage",
       company: "Proyecto Personal",
       period: "Enero 2024 - Marzo 2024",
       type: "Proyecto Personal",
-      resumen: "Desarrollé una plataforma web integral enfocada en el bienestar emocional, que conecta recursos de YouTube, calendario de Google y mapas para ayudar a personas que buscan apoyo psicológico en Cancún. La plataforma incluye un asistente virtual impulsado por IA para brindar apoyo inicial y orientación. Algunas de las tareas que realicé fueron:",
+      resumen: "Desarrollé un sistema de gestión de flotillas dedicados a la renta de autos. La plataforma centraliza la administración de vehículos, reservas, contratos, mantenimientos, seguros. Esto fue algo de lo que hice:",
       description: [
-        "Integré múltiples APIs (YouTube, Calendar, Maps) para crear un hub de recursos de salud mental, incluyendo videos motivacionales y ubicación de centros de atención psicológica en Cancún ",
-        "Implementé un sistema de chat con IA usando OpenAI para ofrecer un primer nivel de apoyo emocional y guiar a los usuarios hacia recursos profesionales.",
+        "Diseñé e implementé módulos de gestión para registrar y administrar vehículos, reservas, contratos y mantenimientos, lo que permitió a los usuarios gestionar sus operaciones de manera centralizada y eficiente.",
+        "Apliqué una arquitectura de cebolla (Onion Architecture) en el backend para garantizar una estructura modular y flexible, promoviendo la escalabilidad y el mantenimiento del sistema.",
+        "Implementé autenticación y autorización de usuarios mediante JWT (JSON Web Tokens), asegurando un acceso seguro y controlado a la plataforma, tanto para administradores como para los socios.",
       ],
-      skills: ["React", "TailwindCSS", "API OpenAI", "Express.js", "MySQL", "Git"]
+      skills: ["React", "TailwindCSS", ".NET", "MySQL", "Git"]
     },
     {
       title: "Tienda en línea",
       company: "Proyecto Personal",
       period: "Enero 2023 - Marzo 2023",
       type: "Proyecto Personal",
-      resumen: "Desarrolle un e-commerce especializado en productos para el bienestar mental y emocional, desde libros de autoayuda hasta artículos para terapia y meditación.",
+      resumen: "Desarrolle un e-commerce especializado en productos para el bienestar mental y emocional, desde libros de autoayuda hasta artículos para terapia y meditación. Algunas de mis contribuciones fueron los siguientes:",
       description: [
         "Diseñé e implementé un módulo de catálogo de productos para facilitar la navegación y búsqueda de artículos.",
         "Creé una landing page atractiva y optimizada para captar la atención de los usuarios.",
