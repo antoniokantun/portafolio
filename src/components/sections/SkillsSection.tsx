@@ -1,25 +1,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import {
   Users,
   MessagesSquare,
-  Brain
+  Brain,
+  LucideIcon
 } from 'lucide-react';
 
-const TechIcon = ({ name }) => {
+interface TechIconProps {
+  name: string;
+}
+
+interface TechnicalSkill {
+  icon: string;
+  color: string;
+}
+
+interface SoftSkill {
+  name: string;
+  icon: LucideIcon;
+  color: string;
+  isLucide: boolean;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: TechnicalSkill[] | SoftSkill[];
+}
+
+const TechIcon = ({ name }: TechIconProps) => {
   return (
-    <div className="w-8 h-8">
-      <img 
+    <div className="w-8 h-8 relative">
+      <Image 
         src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-original.svg`}
         alt={`${name} icon`}
-        className="w-full h-full object-contain"
+        width={32}
+        height={32}
+        className="object-contain"
       />
     </div>
   );
 };
 
 const SkillsSection = () => {
-  const skillCategories = [
+  const skillCategories: SkillCategory[] = [
     {
       title: 'Frontend',
       skills: [
@@ -49,8 +74,7 @@ const SkillsSection = () => {
         { icon: 'git', color: '#F05032' },
         { icon: 'github', color: '#181717' },
         { icon: 'vscode', color: '#007ACC' },
-        { icon: 'postman', color: '#FF6C37' } 
-
+        { icon: 'postman', color: '#FF6C37' }
       ]
     },
     {
@@ -62,6 +86,10 @@ const SkillsSection = () => {
       ]
     }
   ];
+
+  const isSoftSkillsCategory = (skills: TechnicalSkill[] | SoftSkill[]): skills is SoftSkill[] => {
+    return 'name' in (skills[0] || {});
+  };
 
   return (
     <section id="skill" className="py-20 bg-gray-900">
@@ -82,8 +110,7 @@ const SkillsSection = () => {
               <h3 className="text-xl font-semibold mb-6 text-teal-500">
                 {category.title}
               </h3>
-              {category.title === 'Soft Skills' ? (
-                // Mantener el diseño original para Soft Skills
+              {isSoftSkillsCategory(category.skills) ? (
                 <div className="grid gap-4">
                   {category.skills.map((skill) => (
                     <motion.div
@@ -104,7 +131,6 @@ const SkillsSection = () => {
                   ))}
                 </div>
               ) : (
-                // Grid de 3 columnas para las secciones técnicas
                 <div className="grid grid-cols-3 gap-4">
                   {category.skills.map((skill) => (
                     <motion.div
@@ -113,7 +139,7 @@ const SkillsSection = () => {
                       whileHover={{ scale: 1.1 }}
                     >
                       <div className="p-2 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-colors duration-300">
-                        <TechIcon name={skill.icon.toLowerCase()} />
+                        <TechIcon name={skill.icon} />
                       </div>
                     </motion.div>
                   ))}

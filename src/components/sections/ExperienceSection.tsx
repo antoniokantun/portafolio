@@ -9,20 +9,31 @@ import {
   ChevronUp
 } from 'lucide-react';
 
-const ExperienceSection = () => {
-  const [expandedIndex, setExpandedIndex] = useState(null);
+interface Experience {
+  title: string;
+  company: string;
+  location?: string;
+  period: string;
+  type: string;
+  resumen: string;
+  description: string[];
+  skills: string[];
+}
 
-  const experiences = [
+const ExperienceSection = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const experiences: Experience[] = [
     {
       title: "Aplicacion web de gestión de presupuestos y cotizaciones",
       company: "Cancun Express Rent a Car - Pasantía",
       location: "Cancún, México",
       period: "Mayo 2024 - Agosto 2024",
       type: "Pasantía",
-      resumen: "Trabajé en el desarrollo de una aplicación web para gestionar presupuestos, cotizaciones y administración de ingresos de artículos automovilísticos. Esto fue algo de lo que hice:",
+      resumen: "Trabajé en el desarrollo de una aplicación web para gestionar presupuestos, cotizaciones de artículos automovilísticos. Esto fue algo de lo que hice:",
       description: [
         "Participé en el diseño e implementación de las interfaces del frontend, asegurando una experiencia de usuario intuitiva y eficiente.",
-        "Diseñé e implementé módulos funcionales para cotizaciones, ventas, clientes, productos, adminsitradores y configuracion.", 
+        "Diseñé e implementé módulos funcionales para cotizaciones, ventas, clientes, productos, administradores y configuracion.", 
         "Participé en la estructuración de una base de datos robusta en MySQL para garantizar su escalabilidad.",
       ],
       skills: ["Laravel", "PHP", "TailwindCSS", "MySQL", "Git"]
@@ -44,7 +55,7 @@ const ExperienceSection = () => {
       company: "Proyecto Personal",
       period: "Enero 2023 - Marzo 2023",
       type: "Proyecto Personal",
-      resumen: "Desarrolle un e-commerce especializado en productos para el bienestar mental y emocional, desde libros de autoayuda hasta artículos para terapia y meditación. La plataforma busca hacer más accesibles las herramientas de apoyo psicológico.",
+      resumen: "Desarrolle un e-commerce especializado en productos para el bienestar mental y emocional, desde libros de autoayuda hasta artículos para terapia y meditación.",
       description: [
         "Diseñé e implementé un módulo de catálogo de productos para facilitar la navegación y búsqueda de artículos.",
         "Creé una landing page atractiva y optimizada para captar la atención de los usuarios.",
@@ -55,7 +66,7 @@ const ExperienceSection = () => {
     }
   ];
 
-  const toggleExpansion = (index) => {
+  const toggleExpansion = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
@@ -77,12 +88,10 @@ const ExperienceSection = () => {
               className="relative"
             >
               <div className="bg-gray-800 rounded-xl p-6 ml-12 relative hover:shadow-xl transition-shadow duration-300">
-                {/* Icono indicador */}
                 <div className="absolute -left-8 top-8 bg-teal-500 rounded-full p-3">
                   <Briefcase className="w-6 h-6 text-white" />
                 </div>
 
-                {/* Header section - always visible */}
                 <div className="flex justify-between items-start flex-wrap gap-4 mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-teal-500">
@@ -107,7 +116,6 @@ const ExperienceSection = () => {
                   </div>
                 </div>
 
-                {/* Toggle button */}
                 <button
                   onClick={() => toggleExpansion(index)}
                   className="flex items-center gap-2 text-teal-500 hover:text-teal-400 transition-colors mt-2"
@@ -119,7 +127,6 @@ const ExperienceSection = () => {
                   )}
                 </button>
 
-                {/* Expandable content */}
                 <AnimatePresence>
                   {expandedIndex === index && (
                     <motion.div
