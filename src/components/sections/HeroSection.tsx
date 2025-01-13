@@ -26,7 +26,7 @@ export const HeroSection = ({ avatarImage }: HeroSectionProps) => {
               <span className="text-teal-500"> Emmanuel</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-400">
-              Desarrollador web jr
+              Desarrollador jr
             </p>
             <div className="flex gap-4">
               {[

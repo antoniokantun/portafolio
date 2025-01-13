@@ -22,7 +22,7 @@ export const AboutSection = ({ perfilImage }: AboutSectionProps) => {
               <span className="text-teal-500">Sobre</span> Mí
             </h2>
             <p className="text-gray-400 leading-relaxed">
-              Me encanta enfrentar nuevos retos y aprender, con el fin de utilizar herramientas y tecnologías modernas. Mis proyectos personales y mi experiencia en una pasantía me han permitido adquirir habilidades prácticas en la temática de diseño y desarrollo web. Tengo interés por participar en proyectos desafiantes y quiero colaborar con personas talentosas con el objetivo de crear soluciones innovadoras. En cuanto a mis habilidades, destacaría mi capacidad para trabajar en equipo, el enfoque en la resolución de problemas y el ánimo para aprender y afrontar nuevos retos. Me motiva el trabajo con el objetivo de construir soluciones digitales que generen un impacto positivo.
+              Me encanta enfrentar nuevos retos y aprender, con el fin de utilizar herramientas y tecnologías modernas. Mis proyectos personales y mi experiencia en una pasantía me han permitido adquirir habilidades prácticas en el desarrollo web. Tengo interés por participar en proyectos desafiantes y quiero colaborar con personas talentosas con el objetivo de crear soluciones innovadoras. En cuanto a mis habilidades, destacaría mi capacidad para trabajar en equipo, el enfoque en la resolución de problemas y el ánimo para aprender y afrontar nuevos retos. Me motiva el trabajo con el objetivo de construir soluciones digitales que generen un impacto positivo.
             </p>
             <div className="grid grid-cols-2 gap-4">
               {[
