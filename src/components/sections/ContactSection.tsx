@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 
 export const ContactSection = () => {
+  const email = "tony13.aekc@gmail.com";
   return (
     <section id="contact" className="py-20">
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -10,6 +11,9 @@ export const ContactSection = () => {
         </h2>
         <p className="text-gray-400 mb-8">
           Me encantaría formar parte de tu equipo y contribuir con nuevas ideas.
+        </p>
+        <p className="text-gray-600 mb-6">
+          Correo electrónico: <span className="text-teal-500">{email}</span>
         </p>
         <motion.a
           href="mailto:tony13.aekc@gmail.com"
